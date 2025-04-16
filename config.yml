@@ -1,0 +1,95 @@
+# 
+#====================================================================================
+# Define your file path here
+# data_folder: Base directory for storing scraped data
+# college_folder: Directory for college-specific data
+# district_folder: Directory for district-specific data
+# top_code_folder: Directory for TOP (Taxonomy of Programs) code data
+# record_csv: Path to log file tracking scraping activities
+#====================================================================================
+paths:
+  data_folder: "C:/Users/qxu/Desktop/PerkinsCoreIndicatorReport/Data"
+  college_folder: "C:/Users/qxu/Desktop/PerkinsCoreIndicatorReport/Data/College"
+  district_folder: "C:/Users/qxu/Desktop/PerkinsCoreIndicatorReport/Data/District"
+  top_code_folder: "C:/Users/qxu/Desktop/PerkinsCoreIndicatorReport/Data/Top Code"
+  record_csv: "C:/Users/qxu/Desktop/PerkinsCoreIndicatorReport/Data/scraping_log.csv"
+
+
+#====================================================================================
+# Scrape Parameter List
+# forms: List of form types to scrape
+# colleges: List of colleges to scrape
+# districts: List of districts to scrape
+# years: List of fiscal years to scrape
+# You can add or remove items from these lists as needed
+# These are the the specific parameters under the dropdown menus on the website
+#====================================================================================
+forms:
+  - 'Form 1 Part E-C - College'
+  - 'Form 1 Part E-D - District'
+  - 'Form 1 Part F by 6 Digit TOP Code - College'
+
+colleges:
+  - 'San Diego City College'
+  - 'San Diego Mesa College'
+  - 'San Diego Miramar College Reg Cntr'
+
+districts:
+  - 'San Diego District'
+
+years: 
+  - '2025-2026'
+  - '2024-2025'
+  - '2023-2024'
+  - '2022-2023'
+  - '2021-2022'
+  - '2020-2021'
+
+#====================================================================================
+# Scraper Specific Parameters
+# headless: Boolean to control browser visibility (false = browser visible)
+# explicit_wait: Maximum time (seconds) to wait for specific elements
+# implicit_wait: Default wait time (seconds) for page elements
+# changing the explicit_wait and implicit_wait values may result in unsuccessful scraping
+#====================================================================================
+scraping_params:
+  headless: false
+  explicit_wait: 10
+  implicit_wait: 1
+
+
+#====================================================================================
+# Table Specific Elements
+# TABLE_DIV_ID: ID of the main table containing the data
+# COLUMNS: List of column names to extract from the table
+# You don't need to change these unless the table structure changes
+#====================================================================================
+TABLE_DIV_ID: 'VisibleReportContentASPxRoundPanel2_ReportViewer2_ctl09'
+COLUMNS:
+  - 'CI Number'
+  - 'CI Info'
+  - 'DESCR'
+  - 'Demographic'
+  - 'Count'
+  - 'Total'
+  - 'Negotiated Level - State'
+  - 'Negotiated Level - District'
+  - 'College Performance'
+  - 'Percent Above or Below Negotiated Level'
+  - 'Percent Above or Below 90% Negotiated Level'
+
+#====================================================================================
+# Website Specific Elements
+# You don't need to change these unless the website structure changes
+#====================================================================================
+URL: https://datamart.cccco.edu/Perkins/Core_Indicator_Reports/Forms_All.aspx
+SELECT_FORM_TYPE: 'ASPxRoundPanel1_ASPxComboBoxFT_I'
+SELECT_DISTRICT_COLLEGE: 'ASPxRoundPanel1_ASPxComboBoxC_I'
+FISCAL_YEAR: 'ASPxRoundPanel1_ASPxComboBoxFY_I'
+TOP_CODE: 'ASPxRoundPanel1_ASPxComboBoxTCode_I'
+VIEW_REPORT: 'ASPxRoundPanel1_ASPxButtonRS_CD'
+ELEMENT_INFO:
+  form_type: 'ASPxRoundPanel1_ASPxComboBoxFT_I'
+  district_college: 'ASPxRoundPanel1_ASPxComboBoxC_I'
+  fiscal_year: 'ASPxRoundPanel1_ASPxComboBoxFY_I'
+  top_code: 'ASPxRoundPanel1_ASPxComboBoxTCode_I'
