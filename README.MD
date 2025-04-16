@@ -1,7 +1,7 @@
 # README
 
 ## Introduction
-This package is designed to scrape data from [the Perkins Core Indicator Reports](https://datamart.cccco.edu/Perkins/Core_Indicator_Reports/Forms_All.aspx). The data being scraped includes [Insert Data Types, e.g., product details, user reviews, etc.]. The purpose of this package is to automate the data extraction process, making it easier to collect and analyze the required information.
+This package scrapes and extracts data from the [Perkins Core Indicator Reports](https://datamart.cccco.edu/Perkins/Core_Indicator_Reports/Forms_All.aspx). The scraped data includes all TOP6 code-level Perkins Core Indicator data for the college of interest, as well as college- and/or district-level Perkins Core Indicator data. This package automates the data extraction process, making it easier to collect and analyze Perkins Core Indicator Reports.
 
 ## Instructions
 
@@ -14,9 +14,9 @@ The `config.yml` file contains all the necessary parameters for the scraping pro
 ### 2. Running the Scraper
 You can run the scraper using either the Jupyter Notebook `run.ipynb` or the Python script `run.py`:
 
-#### Using `run.ipynb`(Recommend for Python Beginners)
+#### Option 1: Using `run.ipynb`(Recommended for Python Beginners)
 1. Open the `run.ipynb` file in Jupyter Notebook.
-2. Execute the cells in sequence to scrape the data.
+2. Run each cell in sequence to scrape the data.
 
 #### Option 2: Using `run.py`
 1. Open a terminal or command prompt.
@@ -27,7 +27,11 @@ You can run the scraper using either the Jupyter Notebook `run.ipynb` or the Pyt
     ```
 
 ### 3. Output
-The scraped data will be saved in the folder you specified in `config.yml`
+The scraped data will be saved in the folder you specified in `config.yml`.
 
 Happy scraping!
-Sunny Xu
+Created by Sunny Xu
+CTE Research Expert, San Diego Community College District
+For questions, feel free to reach out at qxu@sdccd.edu
+
+Note: I have also created a script that combines each individual TOP6 code-level file into one master file and cleans the data. After running this script, you can directly import the resulting file into Power BI or Tableau for visualization. SDCCD has also developed a [SDCCD Perkins Core Indicators dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWI3N2Q4ZjMtNzJmZi00MDZhLTg5YTAtNWY4NThhOWRlOGZiIiwidCI6IjA0MGM2MDMxLTNhYmItNDgzNS1iMzBjLTlkODg5NTViNGM2OSIsImMiOjZ9) for reference.
