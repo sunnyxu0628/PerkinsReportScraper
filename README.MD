@@ -26,11 +26,26 @@ You can run the scraper using either the Jupyter Notebook `run.ipynb` or the Pyt
     python run.py
     ```
 
+### ⚠️ Important Note: Adjust Sleep Settings
+To ensure the scraper runs without interruption, we recommend adjusting your computer’s sleep settings so it does **not go to sleep** during the scraping process. If your laptop goes to sleep or becomes inactive, the script may stop running.
+
+#### For macOS:
+- Go to **System Settings** > **Displays** > **Advanced...**
+- Toggle **"Prevent automatic sleeping when the display is off"** to **on**
+
+#### For Windows:
+- Go to **Settings** > **System** > **Power & Sleep**
+- Set **Sleep** to **Never** while plugged in
+
 ### 3. Output
 The scraped data will be saved in the folder you specified in `config.yml`.
 
+### 4. Combining and Cleaning the Data (Optional)
+I have also created a script that combines each individual TOP6 code-level file into one master file and cleans the data. After running this script, you can directly import the resulting file into Power BI or Tableau for visualization. 
+
+SDCCD has also developed a [Perkins Core Indicators Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWI3N2Q4ZjMtNzJmZi00MDZhLTg5YTAtNWY4NThhOWRlOGZiIiwidCI6IjA0MGM2MDMxLTNhYmItNDgzNS1iMzBjLTlkODg5NTViNGM2OSIsImMiOjZ9) for reference.
+
+---
 Happy scraping!
 This code is created by Sunny Xu, CTE Research Expert, San Diego Community College District
 For questions, feel free to reach out at qxu@sdccd.edu
-
-Note: I have also created a script that combines each individual TOP6 code-level file into one master file and cleans the data. After running this script, you can directly import the resulting file into Power BI or Tableau for visualization. SDCCD has also developed a [SDCCD Perkins Core Indicators dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWI3N2Q4ZjMtNzJmZi00MDZhLTg5YTAtNWY4NThhOWRlOGZiIiwidCI6IjA0MGM2MDMxLTNhYmItNDgzNS1iMzBjLTlkODg5NTViNGM2OSIsImMiOjZ9) for reference.
