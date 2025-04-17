@@ -4,7 +4,7 @@ from tqdm import tqdm
 import yaml
 
 # Define the project root directory
-project_root = r"C:\Users\qxu\Desktop\PerkinsCoreIndicatorReport"
+project_root = os.getcwd()
 
 # Add the project root to sys.path if not already present
 if project_root not in sys.path:
