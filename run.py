@@ -22,6 +22,7 @@ from src.TableParser import TopCodeTableParser, CollegeTableParser
 FORM_TYPE_LS = config['forms']
 COLLEGE_LS = config['colleges']
 YEAR_LS = config['years']
+DISTRICT_LS = config['districts']
 
 # Define your file path here
 #====================================================================================
@@ -88,7 +89,19 @@ def run(form_type, college_ls=COLLEGE_LS, year_ls=YEAR_LS):
                 )
                 
     elif form_type == 'Form 1 Part E-D - District':
-        print(f'Download the files yourself and put them in {district_fp}.')
+        top_code = 'NA'
+        for college in college_ls:
+            print(f'Working on {college.strip()}...')
+            for fiscal_year in tqdm(year_ls, desc='Fiscal Years', unit='year', leave=True, position=0):
+                scrape(
+                    form_type,
+                    college,
+                    fiscal_year,
+                    top_code,
+                    record_csv_path=record_csv_path,
+                    output_folder=district_fp,
+                    headless=headless
+                )
     
     elif form_type == 'Form 1 Part F by 6 Digit TOP Code - College':
         for college in college_ls:
