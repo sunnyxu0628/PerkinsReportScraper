@@ -83,4 +83,4 @@ SDCCD has also developed a [Perkins Core Indicators Dashboard](https://app.power
 ---
 Happy scraping!
 This code is created by Sunny Xu, CTE Research Expert, San Diego Community College District
-For questions, feel free to reach out at qxu@sdccd.edu
+For questions, feel free to reach out at sunnyxu0628@outlook.com
